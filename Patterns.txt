@@ -1,0 +1,618 @@
+1] public class Main{
+	public static void main(String[] args) {
+	for (int i=0;i<=5;i++){
+	    for(int j=0;j<=i;j++){
+	        System.out.print("*");
+	    }System.out.println();
+	}
+	}
+}
+
+*
+**
+***
+****
+*****
+******
+
+
+
+
+2] public class Star{
+    public static void main(String[] args){
+        int rows=5;
+        for(int i=1;i<=rows;i++){
+            int num;
+            if(i%2==0){
+                num = 0;
+                for (int j=1;j<=rows;j++){
+                    System.out.print(num);
+                    num=(num==0)?1:0;
+                }
+            }else{
+                num=1;
+                for (int j=1;j<=rows;j++){
+                    System.out.print(num);
+                    num=(num==0)?1:0;
+                }
+            } System.out.println();
+        }
+    }
+
+}
+
+Output:
+
+10101
+01010
+10101
+01010
+10101
+
+
+
+
+3] public class Star1 {
+    public static void main(String[] args) {
+        int a=65, k=0;
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print((char)(a+k)+"");
+                k++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+Output:
+
+A
+BC
+DEF
+GHIJ
+KLMNO
+
+
+
+
+4] 
+public class Star1 {
+    public static void main(String[] args) {
+        int a=65;
+        for(int i=0;i<=5;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print((char)(a+j)+"");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Output:
+
+A
+AB
+ABC
+ABCD
+ABCDE
+ABCDEF
+
+
+
+
+5] 
+
+public class LeftTrianglePattern {    
+public static void main(String args[]){
+int i, j, row = 6;       
+for (i=0; i<row; i++){  
+for (j=2*(row-i); j>=0; j--){
+System.out.print(" ");   
+}   
+for (j=0; j<=i; j++ ){   
+System.out.print("* ");   
+}   
+System.out.println();   
+}   
+}   
+}  
+
+
+Output:
+
+             * 
+           * * 
+         * * * 
+       * * * * 
+     * * * * * 
+   * * * * * * 
+
+
+
+
+6]
+
+public class PyramidPattern  
+{    
+public static void main(String args[])   
+{    
+int i, j, row = 6;       
+for (i=0; i<row; i++)   
+{  
+for (j=row-i; j>1; j--)   
+{  
+System.out.print(" ");   
+}   
+for (j=0; j<=i; j++ )   
+{   
+System.out.print("* ");   
+}   
+System.out.println();   
+}   
+}   
+} 
+
+Output:
+
+     * 
+    * * 
+   * * * 
+  * * * * 
+ * * * * * 
+* * * * * * 
+
+
+
+
+7]
+import java.util.Scanner;
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int row, i, j, space = 1;
+        System.out.print("Enter the number of rows you want to print: ");
+        Scanner sc = new Scanner(System.in);
+        row = sc.nextInt();
+        space = row - 1;
+        for (j = 1; j<= row; j++)
+        {
+            for (i = 1; i<= space; i++)
+            {
+                System.out.print(" ");
+            }
+            space--;
+            for (i = 1; i <= 2 * j - 1; i++)
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        space = 1;
+        for (j = 1; j<= row - 1; j++)
+        {
+            for (i = 1; i<= space; i++)
+            {
+                System.out.print(" ");
+            }
+            space++;
+            for (i = 1; i<= 2 * (row - j) - 1; i++)
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+output:
+    
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+
+
+
+8] 
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int rows=7;
+        for (int i= rows-1; i>=0 ; i--)
+        {
+            for (int j=0; j<=i; j++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+
+
+
+
+9]
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int rows=8;
+        for (int i= 0; i<= rows-1; i++)
+        {
+            for (int j=0; j<=i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k=0; k<=rows-1-i; k++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+ * * * * * 
+  * * * * 
+   * * * 
+    * * 
+     * 
+
+
+
+
+10]
+import java.util.Scanner;
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int i, j, rows;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows you want to print: ");
+        rows = sc.nextInt();
+        for (i= 0; i<= rows-1; i++)
+        {
+            for (j=0; j<=i; j++)
+            {
+                System.out.print("*"+ " ");
+            }
+            System.out.println("");
+        }
+        for (i=rows-1; i>=0; i--)
+        {
+            for(j=0; j <= i-1;j++)
+            {
+                System.out.print("*"+ " ");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+
+
+
+11]
+import java.util.Scanner;
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int i, j, k, n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows you want to print: ");
+        n = sc.nextInt();
+        for (i= 0; i<= n-1 ; i++)
+        {
+            for (j=0; j<i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (k=i; k<=n-1; k++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println("");
+        }
+        for (i= n-1; i>= 0; i--)
+        {
+            for (j=0; j<i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (k=i; k<=n-1; k++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println("");
+        }
+        sc.close();
+    }
+}  
+
+output:
+ 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * *
+
+
+
+
+13]
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int i, j,number, n=7;
+        for(i=0; i<n; i++)
+        {
+            number=1;
+            for(j=0; j<=i; j++)
+            {
+                System.out.print(number+ " ");
+                number++;
+            }
+            System.out.println();
+        }
+    }
+} 
+
+output:
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+ 
+
+
+
+14]
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int i, j, k = 1;
+        for (i = 1; i <= 7; i++)
+        {
+            for (j = 1; j< i + 1; j++)
+            {
+                System.out.print(k++ + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15
+ 
+
+
+
+15]
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int n = 8;  
+        for (int i = 0; i < n; i++)
+        {
+            int number = 1;
+            System.out.printf("%" + (n - i) * 2 + "s", "");
+            for (int j = 0; j <= i; j++)
+            {
+                System.out.printf("%4d", number);
+                number = number * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+
+             1
+           1   1
+         1   2   1
+       1   3   3   1
+     1   4   6   4   1
+
+
+
+
+16]
+import java.util.Scanner;
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int i, j, rows;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows you want to print: ");
+        rows = sc.nextInt();
+        for (i = 1; i <= rows; i++)
+        {
+            for (j = 1; j <= i; j++)
+            {
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+} 
+
+output:
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5
+ 
+
+
+
+17]
+import java.util.Scanner;
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int i, j, rows;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows youy want to print: ");
+        rows = sc.nextInt();
+        for (i = rows; i >= 1; i--)
+        {
+            for (j = rows; j >= i; j--)
+            {
+                System.out.print(j+" ");
+            }
+
+            System.out.println();
+        }
+    }
+}  
+
+output:
+
+5 
+5 4 
+5 4 3 
+5 4 3 2 
+5 4 3 2 1
+
+
+
+
+18]
+import java.util.Scanner;
+
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int i, j, n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows you want to print: ");
+        n = sc.nextInt();
+        for (i = 1; i <= n; i++)
+        {
+            for (j = i; j >= 1; j--)
+            {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+1 
+2 1 
+3 2 1 
+4 3 2 1 
+5 4 3 2 1
+
+
+
+
+
+19]
+public class Star1
+{
+    public static void main(String args[])
+    {
+        int n = 5;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j < i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = i; k <= n; k++)
+            {
+                System.out.print(k+" ");
+            }
+            System.out.println();
+        }
+        for (int i = n-1; i >= 1; i--)
+        {
+            for (int j = 1; j < i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = i; k <= n; k++)
+            {
+                System.out.print(k+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+output:
+1 2 3 4 5 
+ 2 3 4 5 
+  3 4 5 
+   4 5 
+    5 
+   4 5 
+  3 4 5 
+ 2 3 4 5 
+1 2 3 4 5
+ 
+
+
+
+
